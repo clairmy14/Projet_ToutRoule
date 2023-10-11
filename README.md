@@ -5,4 +5,4 @@
 - En plus de consolider ma pratique de Sqlite, j'ai appris à utiliser Flask
 
 
-<sup>_NB: sujet dans le fichier pdf._</sup>
+<sup>_NB: sujet dans le fichier pdf. Copies d'écran du résultat dans le document word. _</sup>
