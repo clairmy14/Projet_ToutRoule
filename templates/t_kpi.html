@@ -1,0 +1,31 @@
+{% extends 'layouts/default.html' %}
+
+{% block body%}
+
+
+<div>
+    <section >
+        <h2>KPI: Nombre d'employé ayant déjà déclaré une mission</h2>
+        <p id="kpi">{{t_reponse1}}</p>
+    </section>
+    
+    <section >
+        <h2>KPI: Répartition du genre parmi les chauffeurs</h2>
+        <img src="{{ url_for('static', filename="figure2.png")}}" width="400" height="400" />
+        <a id="lien" href="/kpi2">liste des chauffeurs</a> 
+    </section>
+
+    <section >
+        <h2>KPI: Nombre total de kilomètres parcourus</h2>
+        <p id="kpi">{{t_reponse3}}</p>
+    </section>
+
+    <section >
+        <h2>KPI: Nombre de kilomètres parcourus par type de véhicules </h2>
+        <img src="{{ url_for('static', filename="figure4.png") }}" width="600" height="400" />
+    </section>
+
+</div>
+
+
+{% endblock %}

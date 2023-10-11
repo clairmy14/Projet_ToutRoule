@@ -1,0 +1,20 @@
+{% extends 'layouts/default.html' %}
+
+{% block body %}
+
+<H1>Formulaire de saisie d'un véhicule</H1>
+<form method="POST">
+    {{ html_formulaire.hidden_tag() }}
+    
+    <label for="{{ html_formulaire.wtf_type_veh.id }}">Type de véhicule:</label>
+    {{ html_formulaire.wtf_type_veh }}
+    <br/><br/>
+
+    <label for="{{ html_formulaire.wtf_immat_veh.id }}">Immatriculation du véhicule:</label>
+    {{ html_formulaire.wtf_immat_veh }}
+    <br/><br/>
+
+    {{ html_formulaire.wtf_envoyer }}
+</form>
+
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends 'layouts/default.html' %}
+
+{% block body%}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tableau des Employés</title>
+    <!-- Inclure Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Styles CSS personnalisés pour les genres et le tableau -->
+    <style>
+        .genre-homme {
+            color: brown;
+        }
+        .genre-femme {
+            color: green;
+        }
+        .genre-autre {
+            color: gray;
+        }
+        .table-bordered td, .table-bordered th {
+            border: 1px solid black; /* Ajoutez des bordures autour des cellules */
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tableau des Employés</h1>
+        <!-- Ajouter une classe de table Bootstrap pour ajouter des bordures et des séparations
+        table est une classe prédéfinie par bootstrap et applique une certaine mise en forme
+        thead-dark est classe prédéfinie par bootstrap et fonctionne avec la classe table
+        -->
+        <table class="table table-bordered"> 
+            <thead class="thead-dark"> 
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>  
+                    <th>Genre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Remplir le tableau avec les données -->
+                {% for row in t_reponse5 %}
+                <tr>
+                    <td>
+                        {% if row[2] == 'male' %}
+                            <span class="genre-homme">{{ row[0] }}</span>
+                        {% elif row[2] == 'female' %}
+                            <span class="genre-femme">{{ row[0] }}</span>
+                        {% else %}
+                            <span class="genre-autre">{{ row[0] }}</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if row[2] == 'male' %}
+                            <span class="genre-homme">{{ row[1] }}</span>
+                        {% elif row[2] == 'female' %}
+                            <span class="genre-femme">{{ row[1] }}</span>
+                        {% else %}
+                            <span class="genre-autre">{{ row[1] }}</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if row[2] == 'male' %}
+                            <span class="genre-homme">Homme</span>
+                        {% elif row[2] == 'female' %}
+                            <span class="genre-femme">Femme</span>
+                        {% else %}
+                            <span class="genre-autre">Autre</span>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- Inclure Bootstrap JavaScript (facultatif) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+{% endblock %}

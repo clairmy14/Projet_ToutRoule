@@ -1,0 +1,31 @@
+{% extends 'layouts/default.html' %}
+
+
+{% block body%}
+
+    <H1>Formulaire de modification d'une mission</H1>
+      <form method="POST">
+          {{ html_formulaire.hidden_tag()}}
+          {{ html_formulaire.wtf_employe.label }}
+          {{ html_formulaire.wtf_employe() }}
+          <br/><br/>
+          {{ html_formulaire.wtf_date_depart.label }}
+          {{ html_formulaire.wtf_date_depart() }}
+          <br/><br/>
+          {{ html_formulaire.wtf_km_depart.label }}
+          {{ html_formulaire.wtf_km_depart() }}
+          <br/><br/>
+          {{ html_formulaire.wtf_date_retour.label }}
+          {{ html_formulaire.wtf_date_retour() }}
+          <br/><br/>
+          {{ html_formulaire.wtf_km_retour.label }}
+          {{ html_formulaire.wtf_km_retour() }}
+                   
+          <br/><br/>
+          {{ html_formulaire.wtf_immat.label }}
+          {{ html_formulaire.wtf_immat() }}
+          <br/><br/>
+        
+          {{ html_formulaire.wtf_envoyer()}}
+      </form>
+{% endblock %}

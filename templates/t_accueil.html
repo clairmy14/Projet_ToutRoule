@@ -1,0 +1,33 @@
+{% extends 'layouts/default.html' %}
+
+{% block body%}
+
+    <h1>Accueil</h1>
+
+    <h2>Contexte</h2>
+
+        <p>Vous travaillez comme data analyst dans une société de transports routiers écologiques.
+        Vous directeur vous demande de réaliser une application web constituée notamment d’un formulaire afin de connaître le nombre de kilomètres parcourus par types de véhicule et d’un tableau de bord.
+        </p>
+
+    <h2>Formulaires</h2>
+        <p>Ce formulaire sera rempli par les chauffeurs.
+        Vous devrez collecter les données suivantes : 
+        nom / prénom du chauffeur : champs obligatoires
+        types de véhicule : camion citerne, camion benne, camion frigorifique, camion fourgon - champ obligatoire
+        nombre de kilomètres parcourus : champ obligatoire
+        commentaire : champ optionnel
+        </p>
+
+    <h2>Dashboard</h2>
+
+        <p>
+        Le tableau de bord doit notamment contenir les informations suivantes : 
+        le nombre de salariés ayant répondu
+        la liste des salariés ayant répondu. Si le salarié est un homme, affichez son nom/prénom de couleur bleu. Si c’est une femme, de couleur verte.
+        le total de kilomètres parcourus tout véhicule confondu
+        le total de kilomètres par types de véhicule sous forme de graphique
+        </p>
+
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'layouts/default.html' %}
+
+{% block body%}
+
+<H1>Formulaire de saisie d'un employé</H1>
+  <form method="POST">
+      {{ html_formulaire.hidden_tag()}}
+      <label for="{{ html_formulaire.wtf_nom.id }}">Nom:</label>
+      {{ html_formulaire.wtf_nom }}
+      <br/><br/>
+
+      <label for="{{ html_formulaire.wtf_prenom.id }}">Prénom:</label>
+      {{ html_formulaire.wtf_prenom }}
+      <br/><br/>
+
+      <label for="{{ html_formulaire.wtf_genre.id }}">Genre:</label>
+      {{ html_formulaire.wtf_genre }}
+      <br/><br/>
+
+      <label for="{{ html_formulaire.wtf_fonction.id }}">Fonction:</label>
+      {{ html_formulaire.wtf_fonction }}
+      <br/><br/>
+
+      {{ html_formulaire.wtf_envoyer()}}
+  </form>
+
+{% endblock %}

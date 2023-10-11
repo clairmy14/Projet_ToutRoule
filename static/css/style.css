@@ -1,0 +1,59 @@
+body, div, ul { margin: 0; padding: 0; }
+p { margin: 5px 0; }
+body { background-color: rgba(209, 236, 209, 0.36);
+    font-family: Times, serif; font-size: 16px; } 
+/* Bloc Centré pour l'ensemble de la page */ 
+.global { width: 75%; margin: 0 auto;
+    background-color: rgb(209, 236, 209) ; /* kfliäl Clair */
+    background-image: url(transport-vert.jpeg) ;
+    background-repeat: no-repeat; }
+.entete { height: 150px; padding: 10px;
+    text-align: right; } 
+
+#entete h1 { margin: 3px 30px; color: white;
+    font-size: 153px; font-weight: normal;  }
+
+.blocmenu { width: 160px; float: left; } 
+.contenu { width: 750px; float: left;
+    padding: 0 10px 10px 30pX; 
+    }
+
+.pied { clear: both; margin-bottom: 10px;
+    padding: 10px 10px 10px 20px;
+    background-color: rgb(148, 209, 148);
+    font-family: Times, serif; font-style: italic;
+    font-size: 16px; color: #005f36;
+    text-align: center; } 
+/* Détails pour le menu de navigation */
+#menu { margin-top: 30px; margin-left: 10px; } 
+#menu li { list-style-type: none; }
+
+#menu li a, #menu li a:visited { 
+    background: url(fond_jaune.jpg) ;
+    display: block; line-height: 15px;
+    margin: 20px 0; padding: 10px 5px 10px 40px ;
+    text-decoration: none;
+    font-family: Times, serif; font-style: italic;
+    font-weight: bold; font-size: 18px; color: #003060;
+    }
+#menu li a:hover { 
+    background-image: url(fond_orange.jpg) ;
+    color: #aC0000; }
+    /* Contenu de la page */
+    h1 { font-style: italic; font-family: Times, serif;
+    font-size: 36px; color: #005f36; } 
+    h2 { font-family: Arial, sans—serif; font-size: 22px;
+    font-weight: normal; color: #003060; } 
+    /* Classes pour l'alignement */
+    .centre { text-align: center; }
+    .gauche { float: left; margin-right: 10px; }
+    
+#kpi {font-size: 40px; background: url(fond_kpi.jpg);width: 220px; background-repeat: no-repeat; text-align: center;}
+
+#lien {font-size: 40px; }
+
+h2 {text-align: center; text-decoration: underline;}
+
+h3 {font-size: 40px;}
+
+.center {text-align: center;}

@@ -1,0 +1,40 @@
+{% extends 'layouts/default.html' %}
+
+{% block body %}
+    <h1>{{ t_titre }}</h1>
+
+    <form method="POST" action="{{ url_for('f_enregistrer_missions') }}">
+        {{ form.hidden_tag() }}
+
+        <label for="{{ form.wtf_id_emp.id }}">{{ form.wtf_id_emp.label }}</label>
+        {{ form.wtf_id_emp(class="form-control") }}
+        <br/><br/>
+
+        <label for="{{ form.wtf_immat_mis.id }}">{{ form.wtf_immat_mis.label }}</label>
+        {{ form.wtf_immat_mis(class="form-control") }}
+        <br/><br/>
+
+        <label for="{{ form.wtf_date_depart.id }}">{{ form.wtf_date_depart.label }}</label>
+        {{ form.wtf_date_depart(class="form-control") }}
+        <br/><br/>
+
+        <label for="{{ form.wtf_km_depart.id }}">{{ form.wtf_km_depart.label }}</label>
+        {{ form.wtf_km_depart(class="form-control")  }}
+        <br/><br/>
+
+        <label for="{{ form.wtf_date_retour.id }}">{{ form.wtf_date_retour.label }}</label>
+        {{ form.wtf_date_retour(class="form-control") }}
+        <br/><br/>
+
+
+        <label for="{{ form.wtf_km_retour.id }}">{{ form.wtf_km_retour.label }}</label>
+        {{ form.wtf_km_retour(class="form-control") }}
+        <br/><br/>
+
+        <label for="{{ form.wtf_commentaires.id }}">{{ form.wtf_commentaires.label }}</label>
+        {{ form.wtf_commentaires(class="form-control") }}
+        <br/><br/>
+
+        {{ form.wtf_envoyer(class="btn btn-primary") }}
+    </form>
+{% endblock %}

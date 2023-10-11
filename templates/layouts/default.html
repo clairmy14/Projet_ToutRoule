@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{t_titre}}</title>
+    <link 
+        href="{{url_for('static', filename='css/style.css')}}" 
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="global">
+        <header class="entete">
+            <h1>TOUT'ROULE</h1>
+
+        </header>
+        
+        <section>
+            {% include 'partials/_nav.html' %}
+
+        </section>
+
+
+            
+        <section class="contenu">
+            {% block body%}{% endblock %} 
+        </section> <!—— Fin du bloc section.contenu ——>
+
+        <footer class="pied">
+            <a href="/mentions">Mentions légales</a>   -   <a href="/rgpd">RGPD</a> 
+        </footer>
+
+    </div> <l—— Fin du bloc div.global —->
+</body>
+
+
+</html>

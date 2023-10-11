@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erreur 404</title>
+    <link 
+        href="{{url_for('static', filename='css/style.css')}}" 
+        rel="stylesheet">
+</head>
+<body>
+
+    <div class= "global">
+
+        <section class="contenu">
+
+            <h1>Oups... </h1>
+            <h3 class="center">Votre page est partie en vacances </h3>
+            
+            <p class="center">
+            <img  src="{{ url_for('static', filename='images/plage.webp') }}" width=400 heigth=400>
+            <a id="lien" href="/">Retour au travail</a>
+            
+            </p>
+
+
+        </section>
+    </div>
+
+
+</body>
+</html>
+
